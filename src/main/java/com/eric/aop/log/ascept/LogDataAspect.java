@@ -1,6 +1,6 @@
-package com.eric.aop.ascept;
+package com.eric.aop.log.ascept;
 
-import com.eric.aop.model.AopLogData;
+import com.eric.aop.log.model.AopLogData;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -26,7 +26,7 @@ public class LogDataAspect {
     @Resource
     private AopLogProcessor aopLogProcessor;
 
-    @Pointcut("@annotation(com.eric.aop.annotation.ApiLog) || @within(com.eric.aop.annotation.ApiLog)")
+    @Pointcut("@annotation(com.eric.aop.log.annotation.ApiLog) || @within(com.eric.aop.log.annotation.ApiLog)")
     public void aopLogPointCut(){}
 
     @Around("aopLogPointCut()")

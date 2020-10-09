@@ -1,6 +1,6 @@
-package com.eric.aop.ascept;
+package com.eric.aop.log.ascept;
 
-import com.eric.aop.model.AopLogData;
+import com.eric.aop.log.model.AopLogData;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.http.MediaType;

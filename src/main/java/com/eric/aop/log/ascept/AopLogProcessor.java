@@ -1,8 +1,8 @@
-package com.eric.aop.ascept;
+package com.eric.aop.log.ascept;
 
-import com.eric.aop.annotation.ApiLog;
-import com.eric.aop.collector.LogCollectorExecutor;
-import com.eric.aop.model.AopLogData;
+import com.eric.aop.log.annotation.ApiLog;
+import com.eric.aop.log.collector.LogCollectorExecutor;
+import com.eric.aop.log.model.AopLogData;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.reflect.MethodSignature;
@@ -43,7 +43,7 @@ public class AopLogProcessor {
         }
         if (!ObjectUtils.isEmpty(apiLog)){
             if (!apiLog.logOnError()){
-                log.info("记录方法执行前日志 .... ");
+                log.info("Log before recording method execution .... ");
                 logProcessBefore(logData,apiLog,proceedingJoinPoint);
             }
             return this.proceed(logData,apiLog,proceedingJoinPoint);

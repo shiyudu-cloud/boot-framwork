@@ -1,6 +1,6 @@
-package com.eric.aop.collector;
+package com.eric.aop.log.collector;
 
-import com.eric.aop.model.AopLogData;
+import com.eric.aop.log.model.AopLogData;
 
 /**
  * @author shiyu.du

@@ -1,8 +1,5 @@
-package com.eric.aop.model;
+package com.eric.aop.log.model;
 
-import lombok.*;
-
-import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -10,11 +7,6 @@ import java.util.Date;
  * @describe
  * @date 2020/9/21
  **/
-@Data
-@Builder
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
 public class AopLogData {
 
     /**
@@ -97,5 +89,133 @@ public class AopLogData {
         if (data.getContent() == null) data.setContent("");
         data.setContent(data.getContent() + step + "\n");
         setCurrent(data);
+    }
+
+    public String getAppName() {
+        return appName;
+    }
+
+    public void setAppName(String appName) {
+        this.appName = appName;
+    }
+
+    public String getHost() {
+        return host;
+    }
+
+    public void setHost(String host) {
+        this.host = host;
+    }
+
+    public Integer getPort() {
+        return port;
+    }
+
+    public void setPort(Integer port) {
+        this.port = port;
+    }
+
+    public String getClintIp() {
+        return clintIp;
+    }
+
+    public void setClintIp(String clintIp) {
+        this.clintIp = clintIp;
+    }
+
+    public String getReqUrl() {
+        return reqUrl;
+    }
+
+    public void setReqUrl(String reqUrl) {
+        this.reqUrl = reqUrl;
+    }
+
+    public Object getHeaders() {
+        return headers;
+    }
+
+    public void setHeaders(Object headers) {
+        this.headers = headers;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getMethod() {
+        return method;
+    }
+
+    public void setMethod(String method) {
+        this.method = method;
+    }
+
+    public Object getArgs() {
+        return args;
+    }
+
+    public void setArgs(Object args) {
+        this.args = args;
+    }
+
+    public Object getRespBody() {
+        return respBody;
+    }
+
+    public void setRespBody(Object respBody) {
+        this.respBody = respBody;
+    }
+
+    public Long getCostTime() {
+        return costTime;
+    }
+
+    public void setCostTime(Long costTime) {
+        this.costTime = costTime;
+    }
+
+    public Date getLogDate() {
+        return logDate;
+    }
+
+    public void setLogDate(Date logDate) {
+        this.logDate = logDate;
+    }
+
+    public String getThreadName() {
+        return threadName;
+    }
+
+    public void setThreadName(String threadName) {
+        this.threadName = threadName;
+    }
+
+    public Long getThreadId() {
+        return threadId;
+    }
+
+    public void setThreadId(Long threadId) {
+        this.threadId = threadId;
+    }
+
+    public Boolean getSuccess() {
+        return success;
+    }
+
+    public void setSuccess(Boolean success) {
+        this.success = success;
     }
 }
