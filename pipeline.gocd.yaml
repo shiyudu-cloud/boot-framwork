@@ -1,0 +1,33 @@
+format_version: 10
+pipelines:
+  test-service:
+    group: My-Pipelines
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git-685c2e5:
+        git: https://github.com/shiyudu-cloud/boot-framwork.git
+        username: dushiyuaiyd@sina.com
+        shallow_clone: false
+        auto_update: true
+        branch: master
+        encrypted_password: AES:v9o3o2Vk1RE0PJczKS6lew==:vQ2yp4LdoVAGWO3Ptc4/YA==
+    stages:
+      - test-service:
+          fetch_materials: true
+          keep_artifacts: false
+          clean_workspace: false
+          approval:
+            type: success
+            allow_only_on_success: false
+          jobs:
+            mooc-service:
+              timeout: 0
+              tasks:
+                - exec:
+                    arguments:
+                      - clean
+                      - install
+                    command: mvn
+                    run_if: passed
