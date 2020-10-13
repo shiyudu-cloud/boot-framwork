@@ -2,6 +2,7 @@ package com.eric.aop.log.annotation;
 
 import com.eric.aop.log.collector.LogCollector;
 import com.eric.aop.log.collector.NothingCollector;
+import org.springframework.http.HttpHeaders;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -33,7 +34,7 @@ public @interface ApiLog {
     /**
      * 记录的headers ,默认记录 content-type user-agent
      */
-    String[] headers();
+    String[] headers() default {HttpHeaders.USER_AGENT, HttpHeaders.CONTENT_TYPE};
 
     /**
      * 是否记录请求参数

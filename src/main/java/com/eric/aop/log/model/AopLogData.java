@@ -218,4 +218,26 @@ public class AopLogData {
     public void setSuccess(Boolean success) {
         this.success = success;
     }
+
+    @Override
+    public String toString() {
+        return "AopLogData{" +
+                "appName='" + appName + '\'' +
+                ", host='" + host + '\'' +
+                ", port=" + port +
+                ", clintIp='" + clintIp + '\'' +
+                ", reqUrl='" + reqUrl + '\'' +
+                ", headers=" + headers +
+                ", type='" + type + '\'' +
+                ", content='" + content + '\'' +
+                ", method='" + method + '\'' +
+                ", args=" + args +
+                ", respBody=" + respBody +
+                ", costTime=" + costTime +
+                ", logDate=" + logDate +
+                ", threadName='" + threadName + '\'' +
+                ", threadId=" + threadId +
+                ", success=" + success +
+                '}';
+    }
 }
